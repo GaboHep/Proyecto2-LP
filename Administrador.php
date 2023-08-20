@@ -2,7 +2,7 @@
 class Administrador {
     // Función para verificar si el usuario es administrador
     public function is_admin() {
-        // Reemplaza esta línea con tu propia lógica para verificar si el usuario es administrador
+        //Dependera de usuario...
         return true;
     }
 
