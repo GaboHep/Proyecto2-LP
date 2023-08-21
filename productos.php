@@ -15,6 +15,13 @@ class Producto {
     public function publicarProducto() {
         echo "Producto publicado: " . $this->nombre . " - Cantidad: " . $this->cantidad . " - Categoría: " . $this->categoria . " - Precio: $" . $this->precio;
     }
+
+      public static function compararPorPrecio($a, $b) {
+        if ($a->precio == $b->precio) {
+            return 0;
+        }
+        return ($a->precio < $b->precio) ? -1 : 1;
+    }
 }
 
 function crearProducto() {
@@ -27,5 +34,23 @@ function crearProducto() {
     $producto->publicarProducto();
 }
 
-crearProducto();
+$productos = array();
+
+for ($i = 0; $i < 3; $i++) {
+    $nombre = readline("Ingrese el nombre del producto: ");
+    $cantidad = intval(readline("Ingrese la cantidad en stock: "));
+    $categoria = readline("Ingrese la categoría: ");
+    $precio = floatval(readline("Ingrese el precio: "));
+
+    $producto = new Producto($nombre, $cantidad, $categoria, $precio);
+    $productos[] = $producto;
+}
+
+// Ordenar los productos por precio utilizando la función compararPorPrecio
+usort($productos, array("Producto", "compararPorPrecio"));
+
+// Imprimir la lista ordenada de productos
+foreach ($productos as $producto) {
+    $producto->publicarProducto();
+}
 ?>
