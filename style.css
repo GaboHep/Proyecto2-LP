@@ -47,10 +47,10 @@ body {
 /* Estilos para el panel de título de categorías principales */
 .titulo-panel {
     background-color: #f0f0f0; /* Fondo gris más claro */
-    padding: 10px;
+    margin: 1rem;
 }
 /* Estilos para el panel de productos */
-.productos-panel {
+.panel {
     background-color: #e0e0e0; /* Fondo gris aún más claro */
     padding: 10px;
     display: flex;
@@ -68,3 +68,50 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    appearance: none;
+    position: relative; 
+  }
+  
+  select::after {
+    content: '\25BE'; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  select option {
+    padding: 8px;
+  }
+  
+  select option:checked {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+
+  .top-panel{
+    display: flex;
+  }
+
+  .categoria-panel{
+    margin: 1rem;
+    align-self: center;
+  }

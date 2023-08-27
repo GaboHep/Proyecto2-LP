@@ -12,7 +12,7 @@
                 </div>
                 <div class="botones">
                     <a href="#home">Home</a>
-                    <a href="#tiendas">Tiendas</a>
+                    <a href="#tiendas">Publicar</a>
                 </div>
                 <div class="barra-botones">
                     <input type="text" placeholder="Buscar...">
@@ -22,8 +22,26 @@
                 </div>
             </div>
             <div class="principal_container">
+                <div class="top-panel">
+                    <div class="titulo-panel">
+                        <h2>Categorías principales</h2>
+                    </div>
+                    <div class="categoria-panel">
+                        <select class="search_category select2-hidden-accessible" data-select2-id="select2-data-1-as9t" tabindex="-1" aria-hidden="true" >
+                            <option value="" data-select2-id="select2-data-3-1gum">Buscar categoría</option>
+                            <option value="" data-select2-id="select2-data-6-8ssi">Snacks</option>
+                            <option value="" data-select2-id="select2-data-7-g3s9">Bebidas</option>
+                            <option value="" data-select2-id="select2-data-8-74ju">Congelados</option>
+                            <option value="" data-select2-id="select2-data-9-0k9o">Frutas</option>
+                            <option value="" data-select2-id="select2-data-10-7ehr">Verduras</option>
+                        <select>
+                    </div>
+                </div>
                 <?php include("inicial.php"); ?> 
+                <?php include("creacion_productos.php"); ?> 
             </div>
         </div>
     </body>
 </html>
+
+
