@@ -48,6 +48,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="sorting-panel">
+                    <div class="styled-select">
+                        <select>
+                            <option value="descendente">Ordenar por precio: alto a bajo</option>
+                            <option value="ascendente">Ordenar por precio: bajo a alto</option>
+                            <option value="ultimos">Ultimos Agregados</option>
+                        </select>
+                        <div class="select-dropdown">
+                            <option value="descendente">Ordenar por precio: alto a bajo</option>
+                            <option value="ascendente">Ordenar por precio: bajo a alto</option>
+                            <option value="ultimos">Ultimos Agregados</option>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <?php include("inicial.php"); ?>
         </div>

@@ -78,7 +78,13 @@ body {
     margin: 1rem;
     align-self: center;
 }
-  
+
+.sorting-panel{
+    margin: 1rem;
+    align-self: center;
+    align-items: right;
+}
+
 .styled-select {
     position: relative;
     display: inline-block;
