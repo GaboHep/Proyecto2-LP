@@ -28,7 +28,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: flex-start;
-    margin-left: 10px; /* Espacio hacia la izquierda */
+    margin-right: 20px;
 }
 /* Estilos para la barra de búsqueda y botón de carrito */
 .barra-botones {
@@ -51,22 +51,16 @@ body {
 }
 /* Estilos para el panel de productos */
 .panel {
-    background-color: #e0e0e0; /* Fondo gris aún más claro */
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    
 }
 /* Estilos para los productos */
 .producto {
-    margin: 20px;
-    padding: 10px;
+    margin: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
-    text-align: center;
-}
-.producto img {
-    max-width: 100%;
-    height: auto;
 }
 
 .top-panel{
@@ -136,4 +130,31 @@ body {
 
 .card-imagen{
     width: 13rem;
+    height: 13rem;
 }
+
+.detalle_producto{
+    text-align: left;
+}
+
+.descripcion{
+    font-size: smalls;
+}
+
+.reservacion{
+    text-align: center;
+}
+.reservar{
+    margin: 0.5rem;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
