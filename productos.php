@@ -24,6 +24,16 @@ class Producto {
     }
 }
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nombre = $_POST["nombre"];
+    $cantidad = $_POST["cantidad"];
+    $categoria = $_POST["categoria"];
+    $precio = $_POST["precio"];
+
+    $producto = new Producto($nombre, $cantidad, $categoria, $precio);
+    $producto->publicarProducto();
+}
+
 function crearProducto() {
     $nombre = readline("Ingrese el nombre del producto: ");
     $cantidad = intval(readline("Ingrese la cantidad en stock: "));
