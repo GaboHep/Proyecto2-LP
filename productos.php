@@ -24,14 +24,18 @@ class Producto {
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
-    $cantidad = $_POST["cantidad"];
-    $categoria = $_POST["categoria"];
-    $precio = $_POST["precio"];
+    $imagen = $_POST["imagen"];
+    $subtitulo = $_POST["subtitulo"];
 
-    $producto = new Producto($nombre, $cantidad, $categoria, $precio);
-    $producto->publicarProducto();
+    $nuevoProducto = array(
+        "nombre" => $nombre,
+        "imagen" => $imagen,
+        "subtitulo" => $subtitulo
+    );
+
+    $productos[] = $nuevoProducto;
 }
 
 function crearProducto() {

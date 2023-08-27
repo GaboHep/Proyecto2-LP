@@ -1,25 +1,34 @@
 <div class="productos-panel panel">
     <?php
-        
+
     $productos = array(
         array(
-            "nombre" => "Camiseta",
-            "imagen" => "ruta_a_camiseta.jpg",
-            "subtitulo" => "¡Nueva colección de verano!"
+            "nombre" => "Doritos",
+            "cantidad" => "16",
+            "categoria" => "Snack",
+            "precio" => "1.50",
+            "imagen" => "fotos/doritos.jpg",
         ),
         array(
-            "nombre" => "Zapatos",
-            "imagen" => "ruta_a_zapatos.jpg",
-            "subtitulo" => "Descubre nuestros últimos modelos"
+            "nombre" => "Manzana",
+            "cantidad" => "25",
+            "categoria" => "Fruta",
+            "precio" => "0.25",
+            "imagen" => "fotos/manzana.jpg",
         )
           
     );
     ?>
+    
     <?php foreach ($productos as $producto): ?>
         <div class="producto">
+            <img class="card-imagen" src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
             <h2><?php echo $producto['nombre']; ?></h2>
-            <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
-            <p><?php echo $producto['subtitulo']; ?></p>    
+            <p><?php print "Stock: " . $producto['cantidad']; ?></p> 
+            <p><?php echo $producto['categoria']; ?></p> 
+            <p><?php print "Precio: " . "$". $producto['precio']; ?></p>       
         </div>
     <?php endforeach; ?>
+
+
 </div>

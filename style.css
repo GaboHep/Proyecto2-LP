@@ -127,3 +127,7 @@ body {
 .select-dropdown option:hover {
     background-color: #f0f0f0;
 }
+
+.card-imagen{
+    width: 13rem;
+}
