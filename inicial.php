@@ -72,7 +72,9 @@
                 <p class="descripcion"><?php print "Categoría: " . $producto['categoria']; ?></p>    
             </div>
             <div class="reservacion">
-                <button class="reservar">Reservar</button> 
+                 <a href="carrito_de_compras.php?producto=<?php echo urlencode($producto['nombre']); ?>">
+    <button class="reservar">Reservar</button>
+</a>
             </div>
         </div>
     <?php endforeach; ?>
