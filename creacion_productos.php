@@ -25,9 +25,9 @@
         </button>
       </div>
     </div>
-    <div class="principal_container">
-      <div class="panel">
-        <form action="index.php" method="POST">
+    <div class="creacion_producto">
+      <div class="formulario_creacion">
+        <form  enctype="multipart/form-data"  action="save_products.php" method="POST">
           <label for="nombre">Nombre del Producto:</label>
           <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -50,37 +50,10 @@
           <label for="imagen">Subir una imagen:</label>
           <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
           
-          <input type="submit" value="Guardar Producto">
+          <input class="submit" type="submit" value="Guardar Producto">
 
         </form>
 
-        <?php
-        
-          if ($_SERVER['REQUEST_METHOD'] = 'POST') {
-            if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
-              $nombreArchivo = $_FILES['imagen']['name'];
-              $tipoArchivo = $_FILES['imagen']['type'];
-              $tamañoArchivo = $_FILES['imagen']['size'];
-              $tempArchivo = $_FILES['imagen']['tmp_name'];
-      
-              if (strpos($tipoArchivo, 'image') === 0) {
-                  $rutaDestino = 'fotos/' . $nombreArchivo;
-                  move_uploaded_file($tempArchivo, $rutaDestino);
-                  echo $rutaDestino;
-                  $nuevoProducto = [
-                      'nombre' => $_POST['nombre'],
-                      'cantidad' => $_POST['cantidad'],
-                      'categoria' => $_POST['categoria'],
-                      'precio' => $_POST['precio'],
-                      'imagen' => $rutaDestino, 
-                  ];
-
-                  $productos[] = $nuevoProducto;
-                  exit; 
-              }
-            } 
-          }
-        ?>
       </div>
     </div>
   </div>

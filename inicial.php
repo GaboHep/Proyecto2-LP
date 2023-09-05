@@ -1,51 +1,54 @@
 <div class="productos-panel panel">
     <?php
+    if(!isset($_SESSION['productos'])){
+        $_SESSION['productos'] = array(
+            array(
+                "nombre" => "Doritos",
+                "cantidad" => "16",
+                "categoria" => "Snacks",
+                "precio" => "1.50",
+                "imagen" => "fotos/doritos.jpg",
+            ),
+            array(
+                "nombre" => "Manzana",
+                "cantidad" => "25",
+                "categoria" => "Frutas",
+                "precio" => "0.25",
+                "imagen" => "fotos/manzana.jpg",
+            ),
+            array(
+                "nombre" => "Coca Cola",
+                "cantidad" => "36",
+                "categoria" => "Bebidas",
+                "precio" => "1.20",
+                "imagen" => "fotos/coca.jpeg",
+            ),
+            array(
+                "nombre" => "Pera",
+                "cantidad" => "68",
+                "categoria" => "Frutas",
+                "precio" => "0.35",
+                "imagen" => "fotos/pera.jpg",
+            ),
+            array(
+                "nombre" => "Helado Chocolate",
+                "cantidad" => "10",
+                "categoria" => "Congelados",
+                "precio" => "2.25",
+                "imagen" => "fotos/heladoChoco.jpeg",
+            ),
+            array(
+                "nombre" => "Cebollas",
+                "cantidad" => "56",
+                "categoria" => "Verduras",
+                "precio" => "0.15",
+                "imagen" => "fotos/cebolla.jpeg",
+            )
+    
+        );
+    }
+    $productos =  $_SESSION['productos']
 
-    $productos = array(
-        array(
-            "nombre" => "Doritos",
-            "cantidad" => "16",
-            "categoria" => "Snacks",
-            "precio" => "1.50",
-            "imagen" => "fotos/doritos.jpg",
-        ),
-        array(
-            "nombre" => "Manzana",
-            "cantidad" => "25",
-            "categoria" => "Frutas",
-            "precio" => "0.25",
-            "imagen" => "fotos/manzana.jpg",
-        ),
-        array(
-            "nombre" => "Coca Cola",
-            "cantidad" => "36",
-            "categoria" => "Bebidas",
-            "precio" => "1.20",
-            "imagen" => "fotos/coca.jpeg",
-        ),
-        array(
-            "nombre" => "Pera",
-            "cantidad" => "68",
-            "categoria" => "Frutas",
-            "precio" => "0.35",
-            "imagen" => "fotos/pera.jpg",
-        ),
-        array(
-            "nombre" => "Helado Chocolate",
-            "cantidad" => "10",
-            "categoria" => "Congelados",
-            "precio" => "2.25",
-            "imagen" => "fotos/heladoChoco.jpeg",
-        ),
-        array(
-            "nombre" => "Cebollas",
-            "cantidad" => "56",
-            "categoria" => "Verduras",
-            "precio" => "0.15",
-            "imagen" => "fotos/cebolla.jpeg",
-        )
-
-    );
     ?>
     
     <?php foreach ($productos as $producto): ?>
