@@ -43,26 +43,13 @@
             "categoria" => "Fruta",
             "precio" => "0.25",
             "imagen" => "fotos/manzana.jpg",
-        ),array(
-            "nombre" => "Manzana",
-            "cantidad" => "25",
-            "categoria" => "Fruta",
-            "precio" => "0.25",
-            "imagen" => "fotos/manzana.jpg",
-        ),
-        array(
-            "nombre" => "Manzana",
-            "cantidad" => "25",
-            "categoria" => "Fruta",
-            "precio" => "0.25",
-            "imagen" => "fotos/manzana.jpg",
         )
 
     );
     ?>
     
     <?php foreach ($productos as $producto): ?>
-        <div class="producto">
+        <div class="producto" data-categoria="<?php echo $producto['categoria']; ?>">
             <img class="card-imagen" src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
             <div class= "detalle_producto">
                 <h5><?php print "PRECIO NORMAL: " ?></h5>
@@ -72,9 +59,9 @@
                 <p class="descripcion"><?php print "Categoría: " . $producto['categoria']; ?></p>    
             </div>
             <div class="reservacion">
-                 <a href="carrito_de_compras.php?producto=<?php echo urlencode($producto['nombre']); ?>">
-    <button class="reservar">Reservar</button>
-</a>
+                <a href="carrito_de_compras.php?producto=<?php echo urlencode($producto['nombre']); ?>">
+                    <button class="reservar">Reservar</button>
+                </a>
             </div>
         </div>
     <?php endforeach; ?>
