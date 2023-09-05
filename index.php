@@ -17,6 +17,7 @@
             <div class="botones">
                 <a href="index.php">Home</a>
                 <a href="creacion_productos.php">Publicar</a>
+                <a href="login.php">Ingresar</a>
             </div>
             <div class="barra-botones">
                 <input type="text" placeholder="Buscar...">
