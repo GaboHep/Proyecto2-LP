@@ -15,8 +15,8 @@
                 <h1>Marketplace</h1>
             </div>
             <div class="botones">
-                <a href="#home">Home</a>
-                <a href="#tiendas">Publicar</a>
+                <a href="index.php">Home</a>
+                <a href="creacion_productos.php">Publicar</a>
             </div>
             <div class="barra-botones">
                 <input type="text" placeholder="Buscar...">
@@ -34,11 +34,11 @@
                     <div class="styled-select">
                         <select id="categorias-seleccion">
                             <option value="">Seleccionar categoría</option>
-                            <option value="Snack">Snack</option>
-                            <option value="Bebidas">Bebida</option>
-                            <option value="Congelados">Congelado</option>
-                            <option value="Fruta">Fruta</option>
-                            <option value="Verdura">Verdura</option>
+                            <option value="Snacks">Snacks</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Congelados">Congelados</option>
+                            <option value="Frutas">Frutas</option>
+                            <option value="Verduras">Verduras</option>
                         </select>
                     </div>
                 </div>
