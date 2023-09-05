@@ -31,18 +31,18 @@
             "imagen" => "fotos/pera.jpg",
         ),
         array(
-            "nombre" => "Manzana",
-            "cantidad" => "25",
-            "categoria" => "Frutas",
-            "precio" => "0.25",
-            "imagen" => "fotos/manzana.jpg",
+            "nombre" => "Helado Chocolate",
+            "cantidad" => "10",
+            "categoria" => "Congelados",
+            "precio" => "2.25",
+            "imagen" => "fotos/heladoChoco.jpeg",
         ),
         array(
-            "nombre" => "Manzana",
-            "cantidad" => "25",
-            "categoria" => "Frutas",
-            "precio" => "0.25",
-            "imagen" => "fotos/manzana.jpg",
+            "nombre" => "Cebollas",
+            "cantidad" => "56",
+            "categoria" => "Verduras",
+            "precio" => "0.15",
+            "imagen" => "fotos/cebolla.jpeg",
         )
 
     );
