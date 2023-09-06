@@ -26,7 +26,7 @@ session_start();
             </div>
             <div class="barra-botones">
                 <input type="text" placeholder="Buscar...">
-                <button class="boton-carrito" onclick="window.location.href='carrito_de_compra.php'">
+                <button class="boton-carrito" onclick="window.location.href='carrito_de_compras.php'">
                     <img src="fotos/carrito_de_compras.png" alt="C">
                 </button>
             </div>
