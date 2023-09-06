@@ -50,6 +50,7 @@ session_start();
                 <div class="sorting-panel">
                     <div class="styled-select">
                         <select id="value-sortin">
+                            <option value="">Seleccionar un orden de precio</option>
                             <option value="descendente">Ordenar por precio: alto a bajo</option>
                             <option value="ascendente">Ordenar por precio: bajo a alto</option>
                         </select>

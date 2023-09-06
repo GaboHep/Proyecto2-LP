@@ -23,7 +23,9 @@ function sortingProductosPorPrecio() {
     Array.from(productos).sort(function(a, b) {
         var precioA = a.getAttribute("data-precio");
         var precioB = b.getAttribute("data-precio");
-        if (valueSorting === "ascendente") {
+        if (valueSorting === ""){
+            producto.style.display = "block";
+        } else if (valueSorting === "ascendente") {
             return precioA - precioB;
         } else if (valueSorting === "descendente") {
             return precioB - precioA;
