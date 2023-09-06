@@ -52,11 +52,11 @@
     ?>
     
     <?php foreach ($productos as $producto): ?>
-        <div class="producto" data-categoria="<?php echo $producto['categoria']; ?>">
+        <div class="producto" data-categoria="<?php echo $producto['categoria']; ?>" data-precio="<?php echo $producto['precio']; ?>">
             <img class="card-imagen" src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
             <div class= "detalle_producto">
                 <h5><?php print "PRECIO NORMAL: " ?></h5>
-                <h3><?php print "$". $producto['precio']; ?></h3>
+                <h3 ><?php print "$". $producto['precio']; ?></h3>
                 <p class="descripcion"><?php echo $producto['nombre']; ?></p>
                 <p class="descripcion"><?php print "Stock: " . $producto['cantidad']; ?></p> 
                 <p class="descripcion"><?php print "Categoría: " . $producto['categoria']; ?></p>    

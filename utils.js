@@ -16,7 +16,33 @@ function filtrarProductosPorCategoria() {
     });
 }
 
+function sortingProductosPorPrecio() {
+    var valueSorting = document.getElementById("value-sortin").value;
+    var productos = document.querySelectorAll(".producto");
+    console.log(productos);
+    Array.from(productos).sort(function(a, b) {
+        var precioA = a.getAttribute("data-precio");
+        var precioB = b.getAttribute("data-precio");
+        if (valueSorting === "ascendente") {
+            return precioA - precioB;
+        } else if (valueSorting === "descendente") {
+            return precioB - precioA;
+        }
+    }).forEach(function(producto) {
+        document.querySelector(".productos-panel").appendChild(producto);
+    });
+
+
+}
+
+
 $(document).ready(function() {
     document.getElementById("categorias-seleccion").addEventListener("change", filtrarProductosPorCategoria);
     filtrarProductosPorCategoria();
 })
+
+$(document).ready(function() {
+    document.getElementById("value-sortin").addEventListener("change", sortingProductosPorPrecio);
+    sortingProductosPorPrecio();
+})
+
