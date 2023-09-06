@@ -19,13 +19,12 @@ session_start();
             </div>
             <div class="botones">
                 <a href="index.php">Home</a>
-                <a href="creacion_productos.php">Publicar</a>
                 <a href="login.php">Ingresar</a>
-                <a href="editar_productos.php">Editar</a>
+                <a href="creacion_productos.php" id="publicar">Publicar</a>
+                <a href="editar_productos.php" id="editar">Editar</a>
             
             </div>
             <div class="barra-botones">
-                <input type="text" placeholder="Buscar...">
                 <button class="boton-carrito" onclick="window.location.href='carrito_de_compras.php'">
                     <img src="fotos/carrito_de_compras.png" alt="C">
                 </button>
@@ -62,4 +61,5 @@ session_start();
         </div>
     </div>
 </body>
+
 </html>

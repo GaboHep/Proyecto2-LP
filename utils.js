@@ -36,6 +36,24 @@ function sortingProductosPorPrecio() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    
+    //var username = <?php echo json_encode($_SESSION['username']); ?>;
+    var seccionPublicar = document.getElementById('publicar');
+    var seccionEditar = document.getElementById('editar');
+
+    console.log(username);
+    console.log(seccionPublicar);
+    console.log(seccionEditar);
+
+    if (!username || username !== 'admin') {
+        seccionPublicar.style.display = "none";
+        seccionEditar.style.display = "none";
+    } else {
+        console.log('El usuario es un administrador.');
+    }
+})
+
 $(document).ready(function() {
     document.getElementById("categorias-seleccion").addEventListener("change", filtrarProductosPorCategoria);
     filtrarProductosPorCategoria();
