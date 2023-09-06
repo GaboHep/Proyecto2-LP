@@ -19,7 +19,7 @@ function filtrarProductosPorCategoria() {
 function sortingProductosPorPrecio() {
     var valueSorting = document.getElementById("value-sortin").value;
     var productos = document.querySelectorAll(".producto");
-    console.log(productos);
+    
     Array.from(productos).sort(function(a, b) {
         var precioA = a.getAttribute("data-precio");
         var precioB = b.getAttribute("data-precio");
@@ -38,7 +38,11 @@ function sortingProductosPorPrecio() {
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    //var username = <?php echo json_encode($_SESSION['username']); ?>;
+    var username = "hola";
+
+    var match = document.cookie.match(new RegExp('name=([^;]+)'));
+    if (match) username = decodeURIComponent(match[1]);
+
     var seccionPublicar = document.getElementById('publicar');
     var seccionEditar = document.getElementById('editar');
 

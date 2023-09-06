@@ -1,5 +1,10 @@
 <?php
 session_start();
+error_reporting(0);
+setcookie("username", $_SESSION["username"]);
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
