@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +39,7 @@
         $password = $_POST["password"];
 
         if ($username === $validUsername && $password === $validPassword) {
+            $_SESSION["username"] = $username;
             header("Location: index.php");
             exit();
         } else {

@@ -1,9 +1,13 @@
-<?php
+<?php session_start();  
 class Administrador {
     // Función para verificar si el usuario es administrador
     public function is_admin() {
-        // Depende de usuario
-        return true;
+        if(isset($_SESSION['username'])) {
+            if($_SESSION['username'] == 'admin') {
+                return true;
+            }
+        }
+        return false;
     }
 
     // Función para editar un producto existente
