@@ -21,6 +21,8 @@ session_start();
                 <a href="index.php">Home</a>
                 <a href="creacion_productos.php">Publicar</a>
                 <a href="login.php">Ingresar</a>
+                <a href="editar_productos.php">Editar</a>
+            
             </div>
             <div class="barra-botones">
                 <input type="text" placeholder="Buscar...">
